@@ -1,6 +1,5 @@
-from application_state import SimpleApplicationState
-from handler import SimpleHandler, Abort
-import copy
+from .application_state import SimpleApplicationState
+from .handler import SimpleHandler, Abort
 
 
 class EventManager(object):
@@ -34,10 +33,9 @@ class EventManager(object):
             raise Exception("Expected a SimpleApplicationState object.")
 
         for handler in self.handlers[key]:
-            old_state = copy.deepcopy(application_state)
             try:
                 handler(data, application_state)
             except Abort:
-                return old_state
+                break
 
         return application_state
