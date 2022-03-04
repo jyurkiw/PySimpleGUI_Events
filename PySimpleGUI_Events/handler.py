@@ -4,6 +4,7 @@ class SimpleHandler(object):
     Handler functions should satisfy the following function signature:
         def function(PySimpleGuiData, SimpleApplicationState)
     """
+
     def __init__(self, key, handler_function):
         self.key = key
         self.handler_function = handler_function
