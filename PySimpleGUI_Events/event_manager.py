@@ -29,7 +29,7 @@ class EventManager(object):
         The passed application_state needs to be an ApplicationState object with a window object
         that handlers can use to change the GUI.
         """
-        if type(application_state) != SimpleApplicationState:
+        if not issubclass(type(application_state), SimpleApplicationState):
             raise Exception("Expected a SimpleApplicationState object.")
 
         for handler in self.handlers[key]:
