@@ -9,7 +9,7 @@ def read(file_name):
 
 setup(
     name="PySimpleGUI_Events",
-    version="0.0.2",
+    version="0.0.3",
     author="Jeffrey Yurkiw",
     author_email="jyurkiw@yahoo.com",
     description="A simple event handler system for PySimpleGUI",
